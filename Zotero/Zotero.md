@@ -7,14 +7,18 @@
 ## Zoteroに拡張機能を追加
 ZoteroにLatex bibitexのための拡張機能(better bibtex)を導入するために(これがあるとcitationのときに便利)[ここ](https://retorque.re/zotero-better-bibtex/installation/)の右上のlatest releaseをクリックして.xpiファイルを保存.
 ![](images/2021-11-05-15-29-37.png)!
-保存した. Zoteroの```Tools -> Add-ons```をクリックして.xpiファイルをドラッグ. その後再起動を繰り返してアドインがZoteroに入る.
+
+Zoteroの```Tools -> Add-ons```をクリックして.xpiファイルをドラッグ. その後再起動を繰り返してアドインがZoteroに入る.
 ![](images/2021-11-05-15-34-07.png)
 
 ## better bibitexの設定
 Zoteroの```Edit -> Preferences```をクリックしてここで設定を色々変更できる. とりあえず, 書き出しの際に邪魔になるabstract, file, dolをエクスポートしないように設定した.
 ![](images/2021-11-05-15-40-30.png)
+
 自動でcitationを作成してくれるがその名前を好みの形に設定.
+
 ![](images/2021-11-05-15-55-42.png)
+
 Web上で保存をするときにSnapshotはいらないので(デフォルトでは入る), 設定で保存する対象を決定. (現在はBibtexとPDFを設定.)
 ![](images/2021-11-05-16-00-59.png)
 
@@ -39,5 +43,6 @@ Zoteroに蓄えたい論文のページに行って右上の拡張機能ボタ�
 ## TeXでのcitation
 各論文のcitationの名前は論文の名前をクリックして右のinfoにおいて```Citation Key```にあるので, 引用の際にbibファイルを再度開く必要はない!
 ![](images/2021-11-05-16-58-22.png)
+
 
 参考: [Zotero+BibTeXで参考文献の出力を自動化&論文の引用で出てきた順にソートする](https://qiita.com/skrb_hs/items/73061b7a8e39f1e73e0d)
