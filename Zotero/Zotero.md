@@ -7,7 +7,8 @@
 ## Zoteroに拡張機能を追加
 ZoteroにLatex bibitexのための拡張機能(better bibtex)を導入するために(これがあるとcitationのときに便利)[ここ](https://retorque.re/zotero-better-bibtex/installation/)の右上のlatest releaseをクリックして.xpiファイルを保存.
 ![](images/2021-11-05-15-29-37.png)!
-保存した. Zoteroの```Tools -> Add-ons```をクリックして.xpiファイルをドラッグ. その後再起動を繰り返してアドインがZoteroに入る.
+
+Zoteroの```Tools -> Add-ons```をクリックして.xpiファイルをドラッグ. その後再起動を繰り返してアドインがZoteroに入る.
 ![](images/2021-11-05-15-34-07.png)
 
 ## better bibitexの設定
