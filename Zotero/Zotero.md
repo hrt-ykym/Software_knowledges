@@ -13,8 +13,11 @@ ZoteroにLatex bibitexのための拡張機能(better bibtex)を導入するた�
 ## better bibitexの設定
 Zoteroの```Edit -> Preferences```をクリックしてここで設定を色々変更できる. とりあえず, 書き出しの際に邪魔になるabstract, file, dolをエクスポートしないように設定した.
 ![](images/2021-11-05-15-40-30.png)
+
 自動でcitationを作成してくれるがその名前を好みの形に設定.
+
 ![](images/2021-11-05-15-55-42.png)
+
 Web上で保存をするときにSnapshotはいらないので(デフォルトでは入る), 設定で保存する対象を決定. (現在はBibtexとPDFを設定.)
 ![](images/2021-11-05-16-00-59.png)
 
