@@ -44,4 +44,6 @@ Zoteroに蓄えたい論文のページに行って右上の拡張機能ボタ�
 各論文のcitationの名前は論文の名前をクリックして右のinfoにおいて```Citation Key```にあるので, 引用の際にbibファイルを再度開く必要はない!
 ![](images/2021-11-05-16-58-22.png)
 
+```
 参考: [Zotero+BibTeXで参考文献の出力を自動化&論文の引用で出てきた順にソートする](https://qiita.com/skrb_hs/items/73061b7a8e39f1e73e0d)
+```
