@@ -40,6 +40,12 @@ Zoteroに蓄えたい論文のページに行って右上の拡張機能ボタ�
 
 ![](images/2021-11-05-16-20-12.png)
 
+physicsやmathでよく使う形式(Journal of Physics and Math)を導入するために, `preference -> cite`の+ボタンを押して追加. もしほかの分野の形式も取り込みたければここから適宜できる.
+![](images/2021-11-12-14-31-37.png)
+
+`preference -> Export`においてDefault formatをJournal of mathematical physicsに変更.
+![](images/2021-11-12-14-34-27.png)
+
 ## TeXでのcitation
 各論文のcitationの名前は論文の名前をクリックして右のinfoにおいて```Citation Key```にあるので, 引用の際にbibファイルを再度開く必要はない!
 ![](images/2021-11-05-16-58-22.png)
