@@ -1,4 +1,6 @@
-# Juliaのインストール
+# VSCodeでJuliaを動かせるようにする
+
+## Juliaのインストール
 [公式サイト](https://julialang.org/downloads/)からver.1.6.3をダウンロード. ダウンロード先は`C:\Users\<ユーザー名>\AppData\Local\Julia-1.6.3\`.
 
 ## Pathに追加
