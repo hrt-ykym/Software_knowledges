@@ -1,7 +1,18 @@
- # VsCodeのLaTeXにおいてBibTeXを実行し, pTeXの実行まで行う.
-めちゃめちゃ雑にメモを残します.
+ # VsCodeのLaTeXにおいてpTeXおよびBibTeXを実行し, pdfを出力する.
 
- Setting.jsonに下記のように記載する. なお, `command: "hoge"`において私はフルパスで記載しているが, おそらく一般的にはその必要は無い. (例: `"command": "latexmk"`と記載すれば良い.)
+- めちゃめちゃ雑にメモを残します. 
+- windows10向けに記載していますが, Macユーザーにも適用可能であることを確認しています. 適宜コマンドを読み替えてください.
+
+## 拡張機能のインストール
+VSCodeの[LaTeX Workshopの拡張機能](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)をインストールする.
+
+
+## setting.jsonの書き換え
+`ctrl+,`をして右上のボタン
+![](images\2021-12-10-17-52-26.png)
+を押してsetting.jsonを開く.
+
+ setting.jsonに下記のように記載する. なお, `command: "hoge"`において私はフルパスで記載しているが, 一般的にはその必要は無い. (例: `"command": "latexmk"`と記載すれば良い.) 好みに任せる.
 
 
  ```
@@ -177,4 +188,3 @@
 
 
 参考: [Visual Studio CodeでTeXのコンパイルをできるようにする方法](https://qiita.com/SUZUKI_Masaya/items/7fb5509006163e7e671f)
-
