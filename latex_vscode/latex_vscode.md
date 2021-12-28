@@ -84,15 +84,12 @@ VSCodeの[LaTeX Workshopの拡張機能](https://marketplace.visualstudio.com/it
     ]
 },
 {
-    "name": "latexmk",
-    "tools": [ 
-        "latexmk"
-    ]
-},
-{
-    "name": "pdflatex",
+    "name": "ptex2pdf -> pbibtex -> ptex2pdf*2",
     "tools": [
-        "pdflatex"
+        "ptex2pdf",
+        "pbibtex",
+        "ptex2pdf",
+        "ptex2pdf"
     ]
 },
 {
@@ -105,12 +102,15 @@ VSCodeの[LaTeX Workshopの拡張機能](https://marketplace.visualstudio.com/it
     ]
 },
 {
-    "name": "ptex2pdf -> pbibtex -> ptex2pdf*2",
+    "name": "latexmk",
     "tools": [
-        "ptex2pdf",
-        "pbibtex",
-        "ptex2pdf",
-        "ptex2pdf"
+        "latexmk"
+    ]
+},
+{
+    "name": "pdflatex",
+    "tools": [
+        "pdflatex"
     ]
 },
 {
@@ -134,6 +134,7 @@ VSCodeの[LaTeX Workshopの拡張機能](https://marketplace.visualstudio.com/it
 "latex-workshop.latexindent.path": "C:\\texlive\\2017\\bin\\win32\\latexindent.exe",
 "latex-workshop.view.pdf.viewer": "tab",
 "editor.renderControlCharacters": true,
+"workbench.colorTheme": "Dracula",
 
 "[tex]": {
     // スニペット補完中にも補完を使えるようにする
@@ -147,12 +148,12 @@ VSCodeの[LaTeX Workshopの拡張機能](https://marketplace.visualstudio.com/it
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     // インデント幅を2にする
     "editor.tabSize": 2
-},
+},  
 
 "[bibtex]": {
     // インデント幅を2にする
     "editor.tabSize": 2
-},
+}
  ```
 
  以上のような記載をすると, `ctrl+S`の保存と同時にptexがコンパイルされ, pdfの出力まで行われるはずである. 超簡略化して説明すると, 
