@@ -187,4 +187,51 @@ VSCodeの[LaTeX Workshopの拡張機能](https://marketplace.visualstudio.com/it
 ![](images/2021-11-09-17-33-20.png)
 
 
+### 実行テスト
+`reference.bib`ファイルを作成し, 以下のテンプレートファイルをコピペしてください.
+```latex
+@article{Witten:1998qj,
+  author        = {Witten, Edward},
+  title         = {{Anti-de Sitter space and holography}},
+  eprint        = {hep-th/9802150},
+  archiveprefix = {arXiv},
+  reportnumber  = {IASSNS-HEP-98-15},
+  doi           = {10.4310/ATMP.1998.v2.n2.a2},
+  journal       = {Adv. Theor. Math. Phys.},
+  volume        = {2},
+  pages         = {253--291},
+  year          = {1998}
+}
+```
+
+`test.tex`ファイルを作成し, 以下のテンプレートファイルをコピペしてください.
+```tex
+\documentclass[11pt,a4paper]{jsarticle}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{ascmac}
+
+\title{テンプレート}
+\author{Hoge太hoge郎}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section{hoge}
+参考文献\cite{Witten:1998qj}
+
+\bibliographystyle{junsrt}
+\bibliography{reference}
+
+\end{document}
+```
+その後, bibファイルを読み込み, ptex2pdf -> pbibtex -> ptex2pdf*2を実行するために, `ctrl+shift+P`を押して, build with recipeからそれを選んで実行. 正しくsetting.jsonの書き込みが行われていれば実行がなされ, pdfファイルが作成されるはずである
+
+なお, PDFファイルを右ページに置くには, `Ctrl+Alt+v`を押すか, `Ctrl+Shift+P`をして, "latex-workshop.view"を選択すれば良い. 
+
+なお, bibファイルを一度読み込めば毎度recipeから実行をする必要はなく, ptexのみを実行すれば良いため, 保存つまり`ctrl+S`をするたびにptexが実行されれ, 実質自動コンパルが行われる形となっている.
+
+また, 知っていると便利ツールだが, プログラム中で行を折り返すには`Alt+Z`をすれば良いし(これはデフォルトで設定することも可能), pdfから該当のコードへジャンプするには, `ctrl`を押しながらマウスで左クリックをすれば良い.
+
 参考: [Visual Studio CodeでTeXのコンパイルをできるようにする方法](https://qiita.com/SUZUKI_Masaya/items/7fb5509006163e7e671f)
