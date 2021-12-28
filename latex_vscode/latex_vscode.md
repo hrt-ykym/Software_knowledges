@@ -9,8 +9,7 @@ VSCodeの[LaTeX Workshopの拡張機能](https://marketplace.visualstudio.com/it
 
 ## setting.jsonの書き換え
 `ctrl+,`をして右上のボタン
-![](images\2021-12-10-17-52-26.png)
-
+![](images/2021-12-28-17-08-42.png)
 を押してsetting.jsonを開く.
 
  setting.jsonに下記のように記載する. なお, `command: "hoge"`において私はフルパスで記載しているが, 一般的にはその必要は無い. (例: `"command": "latexmk"`と記載すれば良い.) 好みに任せる. MaC OSの場合はターミナルでfindコマンド等を用いてtexliveがインストールしてあるディレクトリを見つけてください.
