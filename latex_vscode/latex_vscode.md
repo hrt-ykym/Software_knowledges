@@ -133,8 +133,6 @@ VSCodeの[LaTeX Workshopの拡張機能](https://marketplace.visualstudio.com/it
 
 "latex-workshop.latexindent.path": "C:\\texlive\\2017\\bin\\win32\\latexindent.exe",
 "latex-workshop.view.pdf.viewer": "tab",
-"editor.renderControlCharacters": true,
-"workbench.colorTheme": "Dracula",
 
 "[tex]": {
     // スニペット補完中にも補完を使えるようにする
