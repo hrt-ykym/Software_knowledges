@@ -1,7 +1,7 @@
  # VsCodeのLaTeXにおいてpTeXおよびBibTeXを実行し, pdfを出力する.
 
 - めちゃめちゃ雑にメモを残します. 
-- windows10向けに記載していますが, Macユーザーにも適用可能であることを確認しています. 適宜コマンドを読み替えてください.
+- windows10で作成しましたが, Macユーザーにも適用可能であることを確認しています. 適宜コマンドを読み替えてください.
 
 ## 拡張機能のインストール
 VSCodeの[LaTeX Workshopの拡張機能](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)をインストールする.
