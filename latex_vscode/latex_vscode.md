@@ -233,4 +233,137 @@ VSCodeの[LaTeX Workshopの拡張機能](https://marketplace.visualstudio.com/it
 
 また, 知っていると便利ツールだが, プログラム中で行を折り返すには`Alt+Z`をすれば良いし(これはデフォルトで設定することも可能), pdfから該当のコードへジャンプするには, `ctrl`を押しながらマウスで左クリックをすれば良い.
 
+## ユーザースニペットを登録しよう. 
+例えば画像とか挿入する時, あれどんな感じで書けばよかったかな. 一回でばっと
+```tex
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=0.5\linewidth]{figure/}
+        \caption{}
+        \label{}
+\end{figure}
+```
+みたいにだしてくれないかな. などという問題を解決するのが, ユーザースニペット. ユーザー定義の文字列を入力すれば定義した内容がバッとでる.
+
+左したの歯車を押して, ユーザースニペットを開く. 
+![](images/2022-07-28-14-35-22.png)
+
+すると以下のような画面が開くので, `latex.json`を開く(まだ構成していない場合には検索して構成してください).
+![](images/2022-07-28-14-36-38.png)
+
+するとスニペット設定画面がでるので, コメントアウトされている例文を参考に自分が定義したいものを書き込んでください. 参考までに, 私が定義しているスニペットを載せておきます. (コピペして使って各々好みに合わせていじると良いかもしれない.)
+```
+{
+	// Place your snippets for latex here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"latex_template":{
+		"prefix": "latex_template",
+		"body": [
+			"\\documentclass[dvipdfmx,report,11pt]{jsarticle}",
+			"\\usepackage{package}",
+			"",
+			"\\title{$1}",
+			"\\author{YokoPhys-h}",
+			"\\date{\\today}",
+			"\\begin{document}",
+			"\\newcommand{\\ctext}[1]{\\raise0.2ex\\hbox{\\textcircled{\\scriptsize{#1}}}}",
+			"\\maketitle",
+			"",
+			"%\\tableofcontents",
+			"",
+			"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+			"",
+			"",
+			"\\section{$2}",
+			"$3",
+			"",
+			"\\bibliographystyle{unsrt}",
+			"\\bibliography{Reference}",
+			"\\end{document}"
+		],
+		"description": "latex template"
+	},
+
+	"include figure": {
+		"prefix": "figure",
+		"body": [
+			"\\\\begin{figure}[H]",
+			"\t\\\\centering",
+			"\t\t\\\\includegraphics[width=0.5\\linewidth]{figure/$1}",
+			"\t\t\\\\caption{$2}",
+			"\t\t\\\\label{$3}",
+			"\\\\end{figure}",
+		],
+		"description": "include graphics"
+	},
+	"include tikz_figure": {
+		"prefix": "tikz_figure",
+		"body": [
+			"\\\\begin{figure}[H]",
+			"\t\\\\centering",
+			"\t\\\\include{$1}",
+			"\t\\\\caption{}",
+			"\t\\\\label{}",
+			"\\\\end{figure}"
+		],
+		"description": "include tikz figure"
+	},
+	"include table": {
+		"prefix": "table",
+		"body": [
+			"\\\\begin{table}[H]",
+			"\t\\\\centering",
+			"\t\\\\caption{}",
+			"\t\\\\label{}",
+			"\t\t\\\\begin{tabular}{c|c}",
+			"\t\t\t$1",
+			"\t\t\\\\end{tabular}",
+			"\\\\end{table}",
+		],
+		"description": "tabular"
+	},
+	"include subtable": {
+		"prefix": "subtable",
+		"body": [
+			"\\\\begin{table}[H]",
+			"\t\\\\begin{minipage}[H]{.45\\textwidth}",
+			"\t\t\\\\begin{center}",
+			"\t\t\\\\caption{(a) caption}",
+			"\t\t\t\\\\begin{tabular}{cc}",
+			"\t\t\t\t$1",
+			"\t\t\t\\\\end{tabular}",
+			"\t\t\\\\end{center}",
+			"\t\t\\\\label{}",
+			"\t\\\\end{minipage}",
+			"\t%",
+			"\t\\\\hfill",
+			"\t%",
+			"\t\\\\begin{minipage}[H]{.45\\textwidth}",
+			"\t\t\\\\begin{center}",
+			"\t\t\\\\caption{(b) caption}",
+			"\t\t\t\\\\begin{tabular}{cc}",
+			"\t\t\t\t$2",
+			"\t\t\t\\\\end{tabular}",
+			"\t\t\\\\end{center}",
+			"\t\t\\\\label{}",
+			"\t\\\\end{minipage}",
+			"\\\\end{table}",
+		],
+		"description": "subtabular"
+	},
+}
+```
+
+## 参考
 参考: [Visual Studio CodeでTeXのコンパイルをできるようにする方法](https://qiita.com/SUZUKI_Masaya/items/7fb5509006163e7e671f)
