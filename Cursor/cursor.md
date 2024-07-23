@@ -28,3 +28,14 @@ VSCodeでGithub Copilotを使用している場合は、以下のような画面
 
 ログインすると、VSCodeとほぼ同じ画面がでてくる。これにて起動の設定は終了！
 ![](images/2024-07-20-17-40-23.png)
+
+# Cursorの設定
+macであれば、左上のCursor -> Preferences -> Cursor Settingsをクリックする。
+
+![](images/2024-07-20-18-46-43.png)
+
+## ツールバーを縦方向にする
+VSCodeと同様に、ツールバーを縦方向にする。
+Cursroの任意の場所で`cmd+,`をして、設定ファイルを開く。設定ファイルで、orientationをverticalに変更する。
+
+![](images/2024-07-23-17-53-27.png)
