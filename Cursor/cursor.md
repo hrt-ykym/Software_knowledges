@@ -39,3 +39,29 @@ VSCodeと同様に、ツールバーを縦方向にする。
 Cursroの任意の場所で`cmd+,`をして、設定ファイルを開く。設定ファイルで、orientationをverticalに変更する。
 
 ![](images/2024-07-23-17-53-27.png)
+
+
+## Cursorの詳細設定
+右上の歯車マークから、settingsを開いて、Featuresタブを開く。すると、いくつか設定項目があると思うが、それぞれの意味は以下のような感じ。
+
+**Chat**
+- **Always search the web**: すべてのプロンプトに`@web`を含めるのと同じように、常にウェブ検索を行う設定。
+- **Fade chat stream**: 有効にすると、チャットがフェード効果で表示される。
+- **Default no context**: デフォルトでコンテキストなしでチャットを送信する設定。
+- **@ symbol suggestions**: AIチャットで`@`シンボルの提案を行う設定。
+- **Narrow scrollbar**: AIチャット用に狭いスクロールバーを使用する設定。
+
+**Editor**
+- **Show chat/edit tooltip**: エディタ内でハイライトされたコードの近くにチャット/編集ツールチップを表示する設定。
+- **Auto parse inline edit links**: `^/⌘ + K`入力に貼り付けられたリンクを自動的に解析する設定。
+- **Auto select for Ctrl/⌘ + K**: インラインコード編集のために自動的に領域を選択する設定。
+- **Use themed diff backgrounds**: インライン差分のためにテーマ背景色を使用する設定。
+- **@ symbol suggestions for Ctrl/⌘ + K**: `Ctrl/⌘ + K`で`@`シンボルの提案を行う設定。
+
+**Terminal**
+- **Terminal hint**: ターミナルの下部にヒントテキストを表示する設定。
+- **Show terminal hover hint**: ターミナル内で「Add to chat」などのヒントを表示する設定。
+
+私の設定は以下のようにした。
+
+![](images/2024-07-24-11-12-05.png)
