@@ -8,3 +8,5 @@ This repository includes the steps of installing software, adding extensions, et
 - **latex_vscode** : VSCodeのLaTeXにおいてBibTeXを実行し, pTeXの実行まで行えるようにする.
 - **Cpp_VSCode**: VSCode上でC/C++コードを動かすための設定を記載.
 - **Julia**: VSCode上でJuliaをうごかせるようにする方法を記載.
+- **Cursor**: Cursorの設定について記載
+
